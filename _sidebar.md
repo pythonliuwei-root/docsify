@@ -12,3 +12,6 @@
     * [C++](./docs/c++.md)
     * [Java](./docs/java.md)
     * [Python](./docs/python.md)
+
+* 部署技术
+  * [nginx](./docs/nginx.md)
