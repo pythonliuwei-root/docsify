@@ -425,3 +425,269 @@ var img = document.getElementById("scream");
 ctx.drawImage(img, 10,10);
 ```
 
+### 颜色、样式和阴影
+
+| 属性          | 描述                                     |
+| ------------- | ---------------------------------------- |
+| fillStyle     | 设置或返回用于填充绘画的颜色、渐变或模式 |
+| strokeStyle   | 设置或返回用于笔触的颜色、渐变或模式     |
+| shadowColor   | 设置或返回用于阴影的颜色                 |
+| shadowBlur    | 设置或返回用于引用的模糊级别             |
+| shadowOffsetX | 设置或返回阴影与形状的水平距离           |
+| shadowOffsetY | 设置或返回阴影与形状的垂直距离           |
+
+| 方法                   | 描述                                      |
+| ---------------------- | ----------------------------------------- |
+| createLinearGradient() | 创建线性渐变(用在画布内容上)              |
+| createPattern()        | 在指定的方向上重复指定的元素              |
+| createRadialGradient() | 创还能放射状/环状的渐变（用在画布内容上） |
+| addColorStop()         | 规定渐变对象中的颜色和停止位置            |
+
+### 线条样式
+
+| 属性       | 描述                                       |
+| ---------- | ------------------------------------------ |
+| lineCap    | 设置或返回线条的结束端点样式               |
+| lineJoin   | 设置或返回两条线相交时，所创建的拐角类型。 |
+| lineWidth  | 设置或返回当前的线条宽度                   |
+| miterLimit | 设置或返回最大斜接长度                     |
+
+### 矩形
+
+| 方法         | 描述                         |
+| ------------ | ---------------------------- |
+| rect()       | 创建矩形                     |
+| fillRect()   | 绘制"被填充"的矩形           |
+| strokeRect() | 绘制矩形(无填充)             |
+| clearRect()  | 在给定的矩形内清除指定的像素 |
+
+### 路径
+
+| 方法                                                         | 描述                                                      |
+| ------------------------------------------------------------ | --------------------------------------------------------- |
+| fill()                                                       | 填充当前绘图（路径）                                      |
+| stroke()                                                     | 绘制已定义的路径                                          |
+| beginPath()                                                  | 起始一条路径,或重置当前路径                               |
+| moveTo()                                                     | 把路径移动到画布中的指定点，不创建线条                    |
+| closePath()                                                  | 创建从当前点回到起始点的路径                              |
+| lineTo()                                                     | 添加一个新店，然后再画布中创还能从该店到最后指定点的线条  |
+| clip()                                                       | 从原始画布剪切任意形状和尺寸的区域                        |
+| [quadraticCurveTo()](https://www.runoob.com/tags/canvas-quadraticcurveto.html) | 创建二次贝塞尔曲线。                                      |
+| [bezierCurveTo()](https://www.runoob.com/tags/canvas-beziercurveto.html) | 创建三次贝塞尔曲线。                                      |
+| [arc()](https://www.runoob.com/tags/canvas-arc.html)         | 创建弧/曲线（用于创建圆形或部分圆）。                     |
+| [arcTo()](https://www.runoob.com/tags/canvas-arcto.html)     | 创建两切线之间的弧/曲线。                                 |
+| [isPointInPath()](https://www.runoob.com/tags/canvas-ispointinpath.html) | 如果指定的点位于当前路径中，则返回 true，否则返回 false。 |
+
+## 转换
+
+| 方法                                                         | 描述                                             |
+| :----------------------------------------------------------- | :----------------------------------------------- |
+| [scale()](https://www.runoob.com/tags/canvas-scale.html)     | 缩放当前绘图至更大或更小。                       |
+| [rotate()](https://www.runoob.com/tags/canvas-rotate.html)   | 旋转当前绘图。                                   |
+| [translate()](https://www.runoob.com/tags/canvas-translate.html) | 重新映射画布上的 (0,0) 位置。                    |
+| [transform()](https://www.runoob.com/tags/canvas-transform.html) | 替换绘图的当前转换矩阵。                         |
+| [setTransform()](https://www.runoob.com/tags/canvas-settransform.html) | 将当前转换重置为单位矩阵。然后运行 transform()。 |
+
+## 文本
+
+| 属性                                                         | 描述                                       |
+| :----------------------------------------------------------- | :----------------------------------------- |
+| [font](https://www.runoob.com/tags/canvas-font.html)         | 设置或返回文本内容的当前字体属性。         |
+| [textAlign](https://www.runoob.com/tags/canvas-textalign.html) | 设置或返回文本内容的当前对齐方式。         |
+| [textBaseline](https://www.runoob.com/tags/canvas-textbaseline.html) | 设置或返回在绘制文本时使用的当前文本基线。 |
+
+
+
+| 方法                                                         | 描述                         |
+| :----------------------------------------------------------- | :--------------------------- |
+| [fillText()](https://www.runoob.com/tags/canvas-filltext.html) | 在画布上绘制"被填充的"文本。 |
+| [strokeText()](https://www.runoob.com/tags/canvas-stroketext.html) | 在画布上绘制文本（无填充）。 |
+| [measureText()](https://www.runoob.com/tags/canvas-measuretext.html) | 返回包含指定文本宽度的对象。 |
+
+## 图像绘制
+
+| 方法                                                         | 描述                           |
+| :----------------------------------------------------------- | :----------------------------- |
+| [drawImage()](https://www.runoob.com/tags/canvas-drawimage.html) | 向画布上绘制图像、画布或视频。 |
+
+## 像素操作
+
+| 属性                                                         | 描述                                                  |
+| :----------------------------------------------------------- | :---------------------------------------------------- |
+| [width](https://www.runoob.com/tags/canvas-imagedata-width.html) | 返回 ImageData 对象的宽度。                           |
+| [height](https://www.runoob.com/tags/canvas-imagedata-height.html) | 返回 ImageData 对象的高度。                           |
+| [data](https://www.runoob.com/tags/canvas-imagedata-data.html) | 返回一个对象，其包含指定的 ImageData 对象的图像数据。 |
+
+
+
+| 方法                                                         | 描述                                                        |
+| :----------------------------------------------------------- | :---------------------------------------------------------- |
+| [createImageData()](https://www.runoob.com/tags/canvas-createimagedata.html) | 创建新的、空白的 ImageData 对象。                           |
+| [getImageData()](https://www.runoob.com/tags/canvas-getimagedata.html) | 返回 ImageData 对象，该对象为画布上指定的矩形复制像素数据。 |
+| [putImageData()](https://www.runoob.com/tags/canvas-putimagedata.html) | 把图像数据（从指定的 ImageData 对象）放回画布上。           |
+
+## 合成
+
+| 属性                                                         | 描述                                     |
+| :----------------------------------------------------------- | :--------------------------------------- |
+| [globalAlpha](https://www.runoob.com/tags/canvas-globalalpha.html) | 设置或返回绘图的当前 alpha 或透明值。    |
+| [globalCompositeOperation](https://www.runoob.com/tags/canvas-globalcompositeoperation.html) | 设置或返回新图像如何绘制到已有的图像上。 |
+
+## 其他
+
+| 方法          | 描述                             |
+| :------------ | :------------------------------- |
+| save()        | 保存当前环境的状态。             |
+| restore()     | 返回之前保存过的路径状态和属性。 |
+| createEvent() |                                  |
+| getContext()  |                                  |
+| toDataURL()   |                                  |
+
+
+
+## HTML 音频/视频 方法
+
+| 方法                                                         | 描述                                      |
+| :----------------------------------------------------------- | :---------------------------------------- |
+| [addTextTrack()](https://www.runoob.com/tags/av-met-addtexttrack.html) | 向音频/视频添加新的文本轨道。             |
+| [canPlayType()](https://www.runoob.com/tags/av-met-canplaytype.html) | 检测浏览器是否能播放指定的音频/视频类型。 |
+| [load()](https://www.runoob.com/tags/av-met-load.html)       | 重新加载音频/视频元素。                   |
+| [play()](https://www.runoob.com/tags/av-met-play.html)       | 开始播放音频/视频。                       |
+| [pause()](https://www.runoob.com/tags/av-met-pause.html)     | 暂停当前播放的音频/视频。                 |
+
+## HTML 音频/视频属性
+
+| 属性                                                         | 描述                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [audioTracks](https://www.runoob.com/tags/av-prop-audiotracks.html) | 返回表示可用音频轨道的 AudioTrackList 对象。                 |
+| [autoplay](https://www.runoob.com/tags/av-prop-autoplay.html) | 设置或返回是否在加载完成后随即播放音频/视频。                |
+| [buffered](https://www.runoob.com/tags/av-prop-buffered.html) | 返回表示音频/视频已缓冲部分的 TimeRanges 对象。              |
+| [controller](https://www.runoob.com/tags/av-prop-controller.html) | 返回表示音频/视频当前媒体控制器的 MediaController 对象。     |
+| [controls](https://www.runoob.com/tags/av-prop-controls.html) | 设置或返回音频/视频是否显示控件（比如播放/暂停等）。         |
+| crossOrigin                                                  | 设置或返回音频/视频的 CORS 设置。                            |
+| [currentSrc](https://www.runoob.com/tags/av-prop-currentsrc.html) | 返回当前音频/视频的 URL。                                    |
+| [currentTime](https://www.runoob.com/tags/av-prop-currenttime.html) | 设置或返回音频/视频中的当前播放位置（以秒计）。              |
+| [defaultMuted](https://www.runoob.com/tags/av-prop-defaultmuted.html) | 设置或返回音频/视频默认是否静音。                            |
+| [defaultPlaybackRate](https://www.runoob.com/tags/av-prop-defaultplaybackrate.html) | 设置或返回音频/视频的默认播放速度。                          |
+| [duration](https://www.runoob.com/tags/av-prop-duration.html) | 返回当前音频/视频的长度（以秒计）。                          |
+| [ended](https://www.runoob.com/tags/av-prop-ended.html)      | 返回音频/视频的播放是否已结束。                              |
+| [error](https://www.runoob.com/tags/av-prop-error.html)      | 返回表示音频/视频错误状态的 MediaError 对象。                |
+| [loop](https://www.runoob.com/tags/av-prop-loop.html)        | 设置或返回音频/视频是否应在结束时重新播放。                  |
+| [mediaGroup](https://www.runoob.com/tags/av-prop-mediagroup.html) | 设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）。 |
+| [muted](https://www.runoob.com/tags/av-prop-muted.html)      | 设置或返回音频/视频是否静音。                                |
+| [networkState](https://www.runoob.com/tags/av-prop-networkstate.html) | 返回音频/视频的当前网络状态。                                |
+| [paused](https://www.runoob.com/tags/av-prop-paused.html)    | 设置或返回音频/视频是否暂停。                                |
+| [playbackRate](https://www.runoob.com/tags/av-prop-playbackrate.html) | 设置或返回音频/视频播放的速度。                              |
+| [played](https://www.runoob.com/tags/av-prop-played.html)    | 返回表示音频/视频已播放部分的 TimeRanges 对象。              |
+| [preload](https://www.runoob.com/tags/av-prop-preload.html)  | 设置或返回音频/视频是否应该在页面加载后进行加载。            |
+| [readyState](https://www.runoob.com/tags/av-prop-readystate.html) | 返回音频/视频当前的就绪状态。                                |
+| [seekable](https://www.runoob.com/tags/av-prop-seekable.html) | 返回表示音频/视频可寻址部分的 TimeRanges 对象。              |
+| [seeking](https://www.runoob.com/tags/av-prop-seeking.html)  | 返回用户是否正在音频/视频中进行查找。                        |
+| [src](https://www.runoob.com/tags/av-prop-src.html)          | 设置或返回音频/视频元素的当前来源。                          |
+| [startDate](https://www.runoob.com/tags/av-prop-startdate.html) | 返回表示当前时间偏移的 Date 对象。                           |
+| [textTracks](https://www.runoob.com/tags/av-prop-texttracks.html) | 返回表示可用文本轨道的 TextTrackList 对象。                  |
+| [videoTracks](https://www.runoob.com/tags/av-prop-videotracks.html) | 返回表示可用视频轨道的 VideoTrackList 对象。                 |
+| [volume](https://www.runoob.com/tags/av-prop-volume.html)    | 设置或返回音频/视频的音量。                                  |
+
+## HTML 音频/视频事件
+
+| 事件                                                         | 描述                                               |
+| :----------------------------------------------------------- | :------------------------------------------------- |
+| [abort](https://www.runoob.com/tags/av-event-abort.html)     | 当音频/视频的加载已放弃时触发。                    |
+| [canplay](https://www.runoob.com/tags/av-event-canplay.html) | 当浏览器可以开始播放音频/视频时触发。              |
+| [canplaythrough](https://www.runoob.com/tags/av-event-canplaythrough.html) | 当浏览器可在不因缓冲而停顿的情况下进行播放时触发。 |
+| [durationchange](https://www.runoob.com/tags/av-event-durationchange.html) | 当音频/视频的时长已更改时触发。                    |
+| emptied                                                      | 当目前的播放列表为空时触发。                       |
+| [ended](https://www.runoob.com/tags/av-event-ended.html)     | 当目前的播放列表已结束时触发。                     |
+| [error](https://www.runoob.com/tags/av-event-error.html)     | 当在音频/视频加载期间发生错误时触发。              |
+| [loadeddata](https://www.runoob.com/tags/av-event-loadeddata.html) | 当浏览器已加载音频/视频的当前帧时触发。            |
+| [loadedmetadata](https://www.runoob.com/tags/av-event-loadedmetadata.html) | 当浏览器已加载音频/视频的元数据时触发。            |
+| [loadstart](https://www.runoob.com/tags/av-event-loadstart.html) | 当浏览器开始查找音频/视频时触发。                  |
+| [pause](https://www.runoob.com/tags/av-event-pause.html)     | 当音频/视频已暂停时触发。                          |
+| [play](https://www.runoob.com/tags/av-event-play.html)       | 当音频/视频已开始或不再暂停时触发。                |
+| [playing](https://www.runoob.com/tags/av-event-playing.html) | 当音频/视频在因缓冲而暂停或停止后已就绪时触发。    |
+| [progress](https://www.runoob.com/tags/av-event-progress.html) | 当浏览器正在下载音频/视频时触发。                  |
+| [ratechange](https://www.runoob.com/tags/av-event-ratechange.html) | 当音频/视频的播放速度已更改时触发。                |
+| [seeked](https://www.runoob.com/tags/av-event-seeked.html)   | 当用户已移动/跳跃到音频/视频中的新位置时触发。     |
+| [seeking](https://www.runoob.com/tags/av-event-seeking.html) | 当用户开始移动/跳跃到音频/视频中的新位置时触发。   |
+| [stalled](https://www.runoob.com/tags/av-event-stalled.html) | 当浏览器尝试获取媒体数据，但数据不可用时触发。     |
+| [suspend](https://www.runoob.com/tags/av-event-suspend.html) | 当浏览器刻意不获取媒体数据时触发。                 |
+| [timeupdate](https://www.runoob.com/tags/av-event-timeupdate.html) | 当目前的播放位置已更改时触发。                     |
+| [volumechange](https://www.runoob.com/tags/av-event-volumechange.html) | 当音量已更改时触发。                               |
+| [waiting](https://www.runoob.com/tags/av-event-waiting.html) | 当视频由于需要缓冲下一帧而停止时触发。             |
+
+# HTML Emoji
+
+Emoji 是来自 UTF-8 字符集的字符: 😄 😍 💗。
+
+表情符号（英语：emoji，日语：絵文字／えもじ emoji），是使用在网页和聊天中的形意符号，最初是日本在无线通信中所使用的视觉情感符号（图画文字）。表情意指面部表情，图标则是图形标志的意思，可用来代表多种表情，如笑脸表示笑、蛋糕表示食物等。 Emoji 看起来像一张图片或图标，其实不是。
+
+Emoji 实际上是 UTF-8 (Unicode) 字符集上的字符。
+
+UTF-8 几乎涵盖了世界上所有的字符和符号。
+
+### HTML charset 属性
+
+想要正常显示一个 HTML 页面，浏览器就需要知道网页使用的字符集。 网页中的字符集使用 [](https://www.runoob.com/tags/tag-meta.html) 标签来指定：
+
+```
+<meta charset="UTF-8">
+```
+
+> **注：**如果我们没有刻意指定 meta 属性，默认的字符集编码也是 UTF-8。
+>
+> 更多 UTF-8 编码可以参考：
+>
+> HTML Unicode（UTF-8） 参考手册
+
+## UTF-8 字符
+
+很多 UTF-8 字符无法在键盘上输入，但我们可以使用数字（称为实体编号）来表示：
+
+- A 为 65
+- B 为 66
+- C 为 67
+
+## 实例
+
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> </head> <body>  <p>显示结果： A B C</p> <p>显示结果： &#65; &#66; &#67;</p>  </body> </html>
+
+
+[尝试一下 »](https://www.runoob.com/try/try.php?filename=tryhtml_emoji)
+
+**实例解析：**
+
+<meta charset="UTF-8"> 定义来字符集。
+
+A, B, 和 C 也可以使用 65, 66, 和 67 来表示。
+
+实体编号需要以 **&#** 开头并以分号 **;** 结尾，这样才能正确显示一个字符。
+
+同样 Emoji 也是字符，可以在 HTML 页面中跟其他字符一样使用它：
+
+## 实例
+
+<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> </head> <body>  <h1>Emoji 标签符号</h1> <p>可以通过 font-size 属性，像设置字体大小一样，设置表情的大小。</p> <p style="font-size:48px"> &#128512; &#128516; &#128525; &#128151; </p>  </body> </html>
+
+
+[尝试一下 »](https://www.runoob.com/try/try.php?filename=tryhtml_emoji2)
+
+------
+
+## Emoji 表情符号
+
+下表列出来一些 Emoji 表情符号：
+
+| Emoji | 值         |
+| :---- | :--------- |
+| 🗻     | & #128507; |
+| 🗼     | & #128508; |
+| 🗽     | & #128509; |
+| 🗾     | & #128510; |
+| 🗿     | & #128511; |
+| 😀     | & #128512; |
+| 😁     | & #128513; |
+| 😂     | & #128514; |
+| 😃     | & #128515; |
+| 😄     | & #128516; |
+| 😅     | & #128517; |
