@@ -90,8 +90,8 @@ cpu要想进行数据的读写，必须和外部器件（标准的说法是芯�
 计算机能处理、传输的信息都是电信号，电信号使用导线传送的。
 
 在计算机中专门有连接CPU和其他芯片的导线，通过成为总线。物理上，一根根导线的集合。逻辑上，地址总线、数据总线、控制总线。
-![Alt text](image.png)
-![image-20231127174639267](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231127174639267.png)
+![Alt text](./images/assembly/image.png)
+
 
 ### CPU向内存读取数据过程
 
@@ -117,7 +117,7 @@ CPU是通过地址总线来指定存储单元的。
 
 ### 地址总线如何发送信息
 
-![image-20231128091010604](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231128091010604.png)
+![Alt text](./images/assembly/image-20231128091010604.png)
 
 程序员从高到低度，就是1011这个地址，它告诉内存是1011地址。
 
@@ -145,7 +145,8 @@ CPU与内存或其他器件之间的数据传送是通过数据总线来进行�
 
 8086CPU数据宽度是16位的，也就是高速公路的16股通道， 所以传输过去只要一次。
 
-![image-20231128090950262](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231128090950262.png)
+![Alt text](./images/assembly/image-20231128090950262.png)
+
 
 ## 控制总线
 
@@ -157,7 +158,7 @@ CPU对外部器件的控制是通过控制总线来进行的，在这里控制�
 
 每个通道可以认为对应的目标器件，控制总线是对目标器件的控制。
 
-![image-20231128090927406](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231128090927406.png)
+![Alt text](./images/assembly/image-20231128090927406.png)
 
 内存读或写命令由一根名为读信号输出控制线，负责由CPU向外传送读信号，CPU向该控制线上输出低电平表示将要读取数据；一根名为写信号输出控制线负责由CPU向外传送写信号。
 
@@ -248,7 +249,7 @@ BIOS是由主板和各类接口卡（如：显卡、网卡等）厂商提供的�
 
 **PC机中各类存储器的逻辑连接**
 
-![image-20231128102040380](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231128102040380.png)
+![Alt text](./images/assembly/image-20231128102040380.png)
 
 上述的那些存储器在物理上是独立的器件，他们在以下两点相同
 
@@ -260,7 +261,7 @@ BIOS是由主板和各类接口卡（如：显卡、网卡等）厂商提供的�
   * 每个物理存储器在这个逻辑存储器哦中占有一个地址段，即一段地址空间。
   * CPU在这段地址空间中读写数据，实际上就是在相对应的物理存储器中读写数据。
 
-![image-20231128102855525](C:\Users\huawei\AppData\Roaming\Typora\typora-user-images\image-20231128102855525.png)
+![Alt text](./images/assembly/image-20231128102855525.png)
 
 CPU只能感知到逻辑存储器中的地址空间，它不知道也不关心真实的物理存储器。
 
