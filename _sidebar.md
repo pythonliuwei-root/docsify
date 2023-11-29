@@ -12,7 +12,6 @@
     * [C++](./docs/c++.md)
     * [Java](./docs/java.md)
     * [Python](./docs/python.md)
-    * [汇编](./docs/AssemblyLanguage.md)
     * [Assembly](./docs/AssemblyLanguage.md)
 
 * 部署技术
